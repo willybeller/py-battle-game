@@ -19,10 +19,10 @@ class Wizard(Character):
         if isPlayer:
             weaponChoosen = False
             while (not weaponChoosen):
-                print("Choisissez votre arme :")
+                print("Choisissez votre arme : (Il vous reste "+str(self.mana)+" points de mana)")
                 print("1 - "+self.weapon.name)
                 for i in range(len(self.spells)):
-                    print(str(i+2)+" - "+self.spells[i].name)
+                    print(str(i+2)+" - "+self.spells[i].name+" ("+str(self.spells[i].mana_cost)+")")
                 try:
                     weapon = int(input())
                 except ValueError:
@@ -176,5 +176,3 @@ class Wizard(Character):
         for frame in frames:
             print(Character.decal_player2()+frame)
             time.sleep(0.05)
-
-

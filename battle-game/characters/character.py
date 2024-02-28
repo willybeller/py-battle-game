@@ -17,7 +17,7 @@ class Character:
         return (self.name + " inflige " + str(damages) + " dégâts ! il reste "+ str(target.hp) + " HP à " + target.name)
 
     def decal_player2():
-        maxLen = "willy subit 10 dégâts magiques! il lui reste 100 HP      "
+        maxLen = "NOMHERO subit 10 dégâts magiques! il lui reste 100 HP      "
         spaces = ""
         for char in maxLen:
             spaces+=" "
